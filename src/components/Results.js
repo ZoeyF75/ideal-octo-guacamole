@@ -6,13 +6,23 @@ class Results extends Component {
   constructor(props){
     super(props);
     this.state = {
-        nominated: []
+        nominated: [],
+        banner: false
     }
   }
 
+  nominatedAll = () => this.setState({banner: true});
+
   //runs when button from results article is clicked, childData = title and year of movie selected
-  clicked = (childData) =>{
-    this.setState({nominated: [...this.state.nominated, childData]});
+  clicked = (childData) => {
+    this.state.nominated.length === 5 ? console.log('too many selected') : this.setState({nominated: [...this.state.nominated, childData]});
+    if (this.state.nominated.length === 4) this.nominatedAll();
+  }
+
+  delete = (childData) => {
+    this.setState({nominated: this.state.nominated.filter(function(movie) {
+      return movie != childData;
+    })});
   }
   
   render() {
@@ -37,7 +47,9 @@ class Results extends Component {
       </div>
       <div className="nominations-container">
         <Nominations
-          title={this.state.nominated} />
+          title={this.state.nominated}
+          banner={this.state.banner}
+          delete={this.delete} />
       </div>
       </div>
     )
