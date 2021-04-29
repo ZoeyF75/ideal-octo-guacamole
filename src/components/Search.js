@@ -26,7 +26,7 @@ const Search = () => {
   return (
     <>
     <div className="search-container">
-      Movie Title
+      <h5>Movie Title</h5>
       <div className="search">
         <i className="fa fa-search"></i>
         <textarea placeholder="Search for a movie title" required minLength="1" onChange={event => onChange(event)}></textarea>

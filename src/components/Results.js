@@ -18,7 +18,7 @@ class Results extends Component {
     return (
       <div className="results-nom-container">
       <div className="results-container">
-        {!this.props.term ? 'Results for ...' : `Results for "${this.props.term}"`}
+        {!this.props.term ? <h5>Results for ...</h5> : <h5>Results for {this.props.term}</h5>}
         {!this.props.data ? 
             !this.props.term ? console.log("nothing entered") : <div>no results found</div>
           :
