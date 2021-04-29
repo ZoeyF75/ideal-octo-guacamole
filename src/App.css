@@ -56,7 +56,6 @@ textarea {
   width: -webkit-fill-available;
 }
 
-
 .results-nom-container {
   display: flex;
   flex-direction: row;
@@ -88,10 +87,18 @@ textarea {
   flex-direction: row;
 }
 
+.nom-info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
 .nominations-container {
   display: flex;
   flex-direction: column;
   min-width: 342px;
+  max-width: 342px;
   border: 1px solid rgb(23, 24, 110);
   border-radius: 5px;
   padding: 1em;
@@ -100,6 +107,7 @@ textarea {
 }
 
 .nominations-container div {
+  display: flex;
   padding: 0.5em;
 }
 
@@ -116,4 +124,15 @@ button {
 
 button:hover {
   background-color: rgb(121, 62, 216);
+}
+
+button.delete {
+  margin-left: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+button.delete:hover {
+  background-color: rgb(172, 13, 13);
+  border: 1px solid rgb(172, 13, 13);
 }
