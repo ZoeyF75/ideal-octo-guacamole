@@ -5,6 +5,23 @@ import Nominations from './Nominations'
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [movies, setMovies] = useState([]);
+
+  const getMovies = async () => {
+    const moviesFromServer = await fetchMovies();
+    setMovies(moviesFromServer);
+  }
+
+  const fetchMovies = async () => {
+    const res = await fetch(`http://www.omdbapi.com/?apikey=2fbce2b8&s=${searchTerm}`);
+    const data = await res.json();
+    return data
+  }
+
+  const onChange = (event) => {
+    setSearchTerm(event.target.value);
+    getMovies();
+  }
 
   return (
     <>
@@ -12,12 +29,14 @@ const Search = () => {
       Movie Title
       <div className="search">
         <i className="fa fa-search"></i>
-        <textarea placeholder="Search for a movie title" required minLength="1" onChange={event => {setSearchTerm(event.target.value)}}></textarea>
+        <textarea placeholder="Search for a movie title" required minLength="1" onChange={event => onChange(event)}></textarea>
       </div>
     </div>
     <div className="results-nom-container">
     <Results
-      term={searchTerm} />
+      term={searchTerm}
+      data={movies.Search} 
+    />
     <Nominations />
    </div>
    </>
