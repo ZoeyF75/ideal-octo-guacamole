@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const ResultsArticle = ({ title, release }) => {
-  return (
-    <div className="article">
-      <span>{title}</span>
-      <span>{release}</span>
-      <button>Nominate</button>
-    </div>
-  )
+class ResultsArticle extends Component {
+
+  render() {
+    return (
+      <>
+      <div className="article">
+        <div className="info">
+          <span>{this.props.title}</span>
+          <span>{this.props.release}</span>
+        </div>
+        <button onClick={this.props.clicked = this.props.title}>Nominate</button>
+      </div>
+      </>
+    )
+  }
+  
 }
 
 export default ResultsArticle
