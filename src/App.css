@@ -41,6 +41,10 @@ body {
   align-items: baseline;
 }
 
+small {
+  color: gray
+}
+
 i {
   margin-right: 0.5em;
 }
