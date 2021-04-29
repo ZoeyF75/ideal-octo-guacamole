@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const Nominations = () => {
-  return (
-    <div className="nominations-container">
-      Nominations
-    </div>
-  )
+export default class Nominations extends Component {
+  render() {
+    return (
+      <>
+        Nominations
+        <span>{this.props.title}</span>
+      </>
+    )
+  }
 }
 
-export default Nominations

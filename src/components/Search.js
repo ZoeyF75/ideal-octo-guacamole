@@ -37,7 +37,6 @@ const Search = () => {
       term={searchTerm}
       data={movies.Search} 
     />
-    <Nominations />
    </div>
    </>
   )

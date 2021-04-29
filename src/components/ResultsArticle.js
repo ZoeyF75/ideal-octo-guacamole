@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class ResultsArticle extends Component {
   onTrigger = (event) => {
-    this.props.clicked(this.props.title);
+    this.props.clicked(`${this.props.title} (${this.props.release})`);
     event.preventDefault();
   }
 

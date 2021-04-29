@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Nominations from './Nominations';
 import ResultsArticle from './ResultsArticle';
 
 class Results extends Component {
@@ -15,6 +16,7 @@ class Results extends Component {
   
   render() {
     return (
+      <div className="results-nom-container">
       <div className="results-container">
         {!this.props.term ? 'Results for ...' : `Results for "${this.props.term}"`}
         {!this.props.data ? 
@@ -29,7 +31,11 @@ class Results extends Component {
             />
           ))
           }
-          {console.log(this.state.nominated)}
+      </div>
+      <div className="nominations-container">
+        <Nominations
+          title={this.state.nominated} />
+      </div>
       </div>
     )
   }
