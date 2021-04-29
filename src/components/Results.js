@@ -30,6 +30,7 @@ class Results extends Component {
               release={movie.Year}
               clicked={this.clicked}
               buttonDisabled={this.state.nominated.includes(`${movie.Title} (${movie.Year})`)}
+              faded={this.state.nominated.includes(`${movie.Title} (${movie.Year})`)? "article-disabled" : "article"}
             />
           ))
           }

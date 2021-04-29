@@ -85,6 +85,17 @@ textarea {
   flex-wrap: wrap;
 }
 
+.article-disabled {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0.5em;
+  max-width: 300px;
+  border-bottom: 2px dotted rgb(80, 7, 98);
+  flex-wrap: wrap;
+  opacity: 0.5;
+}
+
 .info {
   display: flex;
   justify-content: space-between;
@@ -126,7 +137,7 @@ button {
   color: antiquewhite;
 }
 
-button:hover {
+button.success:hover {
   background-color: rgb(121, 62, 216);
 }
 

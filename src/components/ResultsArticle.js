@@ -9,15 +9,15 @@ class ResultsArticle extends Component {
   render() {
     return (
       <>
-      <div className="article">
+      <div className={this.props.faded}>
         <div className="info">
           <span>{this.props.title}</span>
           <span>{this.props.release}</span>
         </div>
-    {this.props.buttonDisabled ? 
-      <button disabled>Nominate</button> 
-        : 
-      <button onClick={this.onTrigger}>Nominate</button> }
+      {this.props.buttonDisabled ? 
+        <button disabled>Nominate</button>
+          : 
+        <button class="success" onClick={this.onTrigger}>Nominate</button> }
       </div>
       </>
     )
