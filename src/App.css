@@ -71,6 +71,15 @@ textarea {
   margin-right: 1em;
 }
 
+.article {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+  max-width: 340px;
+  border-bottom: 2px dotted rgb(80, 7, 98);
+  flex-wrap: wrap;
+}
+
 .nominations-container {
   min-width: 342px;
   border: 1px solid rgb(23, 24, 110);
