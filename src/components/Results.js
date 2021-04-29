@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import ResultsArticle from './ResultsArticle';
 
 class Results extends Component {
-  
-  clicked = e => console.log(e);
+  constructor(props){
+    super(props);
+    this.state = {
+        nominated: []
+    }
+  }
+
+  clicked = (childData) =>{
+    this.setState({nominated: [...this.state.nominated, childData]});
+  }
   
   render() {
     return (
@@ -21,6 +29,7 @@ class Results extends Component {
             />
           ))
           }
+          {console.log(this.state.nominated)}
       </div>
     )
   }

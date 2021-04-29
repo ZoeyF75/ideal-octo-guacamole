@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 
 class ResultsArticle extends Component {
+  onTrigger = (event) => {
+    this.props.clicked(this.props.title);
+    event.preventDefault();
+  }
 
   render() {
     return (
@@ -10,7 +14,7 @@ class ResultsArticle extends Component {
           <span>{this.props.title}</span>
           <span>{this.props.release}</span>
         </div>
-        <button onClick={this.props.clicked = this.props.title}>Nominate</button>
+        <button onClick={this.onTrigger}>Nominate</button>
       </div>
       </>
     )
