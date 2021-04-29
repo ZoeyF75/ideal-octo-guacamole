@@ -7,7 +7,6 @@ export default class Nominations extends Component {
         <h5>Nominations</h5>
         <>{this.props.title.map((title,index) => <div class="nom-info" key={index}>
           <span>{title}</span>
-      
           <span><button class="delete"><span>&#10005;</span></button></span>
           </div>)}
         

@@ -10,6 +10,7 @@ class Results extends Component {
     }
   }
 
+  //runs when button from results article is clicked, childData = title and year of movie selected
   clicked = (childData) =>{
     this.setState({nominated: [...this.state.nominated, childData]});
   }
@@ -28,6 +29,7 @@ class Results extends Component {
               title={movie.Title}
               release={movie.Year}
               clicked={this.clicked}
+              buttonDisabled={this.state.nominated.includes(`${movie.Title} (${movie.Year})`)}
             />
           ))
           }

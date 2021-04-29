@@ -5,7 +5,6 @@ import Results from './Results';
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [movies, setMovies] = useState([]);
-  const [text, setText] = useState('');
 
   const getMovies = async () => {
     const moviesFromServer = await fetchMovies();
@@ -18,15 +17,17 @@ const Search = () => {
     return data
   }
 
+  //when input on textarea changes
   const onChange = (event) => {
     setSearchTerm(event.target.value);
     getMovies();
   }
 
+  //runs when enter key is pressed
   window.onkeydown=function(event){
-    if(event.keyCode==13){
-      event.preventDefault();
-      setSearchTerm(event.target.value);
+    if(event.keyCode===13){
+      event.preventDefault(); //prevents enter spacing in text area
+      setSearchTerm(event.target.value); //allows for the last letter to be searched for
       getMovies();
     }
   }
@@ -38,7 +39,7 @@ const Search = () => {
       <small>Press enter to complete search</small>
       <div className="search">
         <i className="fa fa-search"></i>
-  <textarea placeholder="Search for a movie title" required minLength="1" onChange={event => onChange(event)}>{text}</textarea>
+  <textarea placeholder="Search for a movie title" required minLength="1" onChange={event => onChange(event)}></textarea>
       </div>
     </div>
     <div className="results-nom-container">

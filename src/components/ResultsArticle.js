@@ -14,7 +14,10 @@ class ResultsArticle extends Component {
           <span>{this.props.title}</span>
           <span>{this.props.release}</span>
         </div>
-        <button onClick={this.onTrigger}>Nominate</button>
+    {this.props.buttonDisabled ? 
+      <button disabled>Nominate</button> 
+        : 
+      <button onClick={this.onTrigger}>Nominate</button> }
       </div>
       </>
     )
