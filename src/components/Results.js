@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Results = () => {
+const Results = ({ term }) => {
   return (
     <div className="results-container">
-      Results
+      {!term ? 'Results for ...' : "Results for " + term }
     </div>
   )
 }
