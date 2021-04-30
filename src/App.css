@@ -21,7 +21,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 2.5em;
+  margin-top: 2em;
 } 
 
 .search-container {
@@ -150,4 +150,12 @@ button.delete {
 button.delete:hover {
   background-color: rgb(172, 13, 13);
   border: 1px solid rgb(172, 13, 13);
+}
+
+/* css edited so banners are more uniform when displayed at the same time */
+.alert-danger {
+  max-width: fit-content;
+  padding: 8px;
+  margin: 8px;
+  margin-bottom: 16px;
 }
