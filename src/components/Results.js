@@ -23,6 +23,9 @@ class Results extends Component {
     this.setState({nominated: this.state.nominated.filter(function(movie) {
       return movie != childData;
     })});
+    if(this.state.nominated.length <= 5) {
+      this.setState({banner: false});
+    } 
   }
   
   render() {
