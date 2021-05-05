@@ -11,7 +11,7 @@ This ensures that all dependencies are installed in order to run the application
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-!Startup page[startup](https://raw.githubusercontent.com/ZoeyF75/ideal-octo-guacamole/master/src/assets/startup.png)
+Startup page![startup](https://raw.githubusercontent.com/ZoeyF75/ideal-octo-guacamole/master/src/assets/startup.png)
 
 !Search activated[search](https://github.com/ZoeyF75/ideal-octo-guacamole/blob/master/src/assets/search.png?raw=true)
 
