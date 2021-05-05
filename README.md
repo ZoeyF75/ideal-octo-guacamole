@@ -13,13 +13,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Startup page![startup](https://raw.githubusercontent.com/ZoeyF75/ideal-octo-guacamole/master/src/assets/startup.png)
 
-!Search activated[search](https://github.com/ZoeyF75/ideal-octo-guacamole/blob/master/src/assets/search.png?raw=true)
+Search activated![search](https://github.com/ZoeyF75/ideal-octo-guacamole/blob/master/src/assets/search.png?raw=true)
 
-!All five nomination made, success banner[success](https://github.com/ZoeyF75/ideal-octo-guacamole/blob/master/src/assets/success.png?raw=true)
+All five nomination made, success banner![success](https://github.com/ZoeyF75/ideal-octo-guacamole/blob/master/src/assets/success.png?raw=true)
 
-!Error banner, already made five nominations[error](https://github.com/ZoeyF75/ideal-octo-guacamole/blob/master/src/assets/error.png?raw=true)
+Error banner, already made five nominations![error](https://github.com/ZoeyF75/ideal-octo-guacamole/blob/master/src/assets/error.png?raw=true)
 
-!Cancel button changes color on hoverx[cancel](https://github.com/ZoeyF75/ideal-octo-guacamole/blob/master/src/assets/cancel.png?raw=true)
+Cancel button changes color on hover![cancel](https://github.com/ZoeyF75/ideal-octo-guacamole/blob/master/src/assets/cancel.png?raw=true)
 
 
 
